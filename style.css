@@ -1,0 +1,48 @@
+:root {
+  --salmon: #ef9d71;
+  --black: #000;
+  --white: #eaeaea;
+  --cyan: #aedee0;
+  --dsalmon: #532521;
+  --dcyan: #1f2f32;
+}
+
+@font-face {
+  font-family: MachinaInktrap;
+  src: url(./font/Machina_Inktrap.ttf);
+}
+
+.vdodiv {
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+*::selection {
+  background-color: var(--salmon);
+}
+
+body {
+}
+
+body[theme="black"] .section {
+  background-color: var(--black);
+  color: var(--white);
+  transition: background-color ease-out 0.5s;
+}
+
+body[theme="cyan"] .section {
+  background-color: var(--cyan);
+  color: var(--dcyan);
+  transition: background-color ease-out 0.5s;
+}
+
+body[theme="salmon"] {
+  background-color: var(--salmon);
+  color: var(--dsalmon);
+  transition: background-color ease-out 0.5s;
+}
+
+body[theme="white"] {
+  background-color: var(--white);
+  color: var(--black);
+  transition: background-color ease-out 0.5s;
+}
